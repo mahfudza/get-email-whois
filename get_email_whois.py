@@ -18,6 +18,6 @@ for i in domain_name:
   else:
       emails=email_list
   
-  print(i+" : "+emails.rstrip(','));
+  print(i+" : "+emails.rstrip(', '));
 
   
