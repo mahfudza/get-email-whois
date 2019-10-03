@@ -1,4 +1,7 @@
-import os
+import whois
 
-get_email_whois= 'for i in `cat list_domain`; do echo $i: $(whois $i | grep "Registrant Email" | cut -d: -f2);done'
-os.system(get_email_whois)
+f=open("list_domain","r")
+domain_name=f.read().splitlines()
+
+for i in domain_name:
+  print(whois.whois(i).emails)
